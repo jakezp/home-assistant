@@ -3,7 +3,7 @@ Open source home automation that puts local control and privacy first. Powered b
 
 # Run with:
 ```
-docker run -d --name='home-assistant' --net='bridge' --privileged=true \i
+docker run -d --name='home-assistant' --net='bridge' --cap-add=NET_ADMIN \
     -v '/tmp/home-assistant/config':'/config' \
     -v '/tmp/home-assistant/cron':'/var/spool/cron/crontabs/' \
     -v /etc/localtime:/etc/localtime:ro

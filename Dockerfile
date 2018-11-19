@@ -5,7 +5,7 @@ LABEL maintainer="Jakezp <jakezp@gmail.com>"
 ENV DEBIAN_FRONTEND noninteractive
 
 # Update and install packages
-RUN apt-get update && apt-get upgrade -yq && apt-get install supervisor cron python3 python3-pip python3-venv -yq
+RUN apt-get update && apt-get upgrade -yq && apt-get install supervisor cron net-tools iproute2 inetutils-ping python3 python3-pip python3-venv -yq
 
 # Add config files
 WORKDIR /
